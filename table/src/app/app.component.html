@@ -1,0 +1,9 @@
+<input type = 'number' 
+        [(ngModel)]='number' 
+        (change)="changeOccured()"
+        (keydown)="changeOccured()" 
+        (keypress)="changeOccured()"><br>
+
+<button (click)="sendData()">calculate</button>
+
+<app-calculate *ngIf="child==true" [number] = 'number'></app-calculate>
